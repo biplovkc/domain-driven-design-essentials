@@ -1,6 +1,4 @@
-﻿using System.Collections.Immutable;
-
-namespace Biplov.DDD.Essentials;
+﻿namespace Biplov.DDD.Essentials;
 
 /// <summary>
 /// Base class for aggregate roots
