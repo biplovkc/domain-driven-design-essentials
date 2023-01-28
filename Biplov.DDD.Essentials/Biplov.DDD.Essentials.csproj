@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+		<Authors>Biplov KC</Authors>
+		<OutputType>Library</OutputType>
+		<PackageId>Biplov.DDD.Essentials</PackageId>
+		<PackageProjectUrl>https://github.com/biplovkc/domain-driven-design-essentials</PackageProjectUrl>
+		<PackageTags>Biplov;BiplovKC;DDD;Domain Driven Design;</PackageTags>
+		<AssemblyName>Biplov.DDD.Essentials</AssemblyName>
+		<RootNameSpace>Biplov.DDD.Essentials</RootNameSpace>
+		<TargetFramework>net6.0</TargetFramework>
+		<Description>Useful classes and interfaces to implement domain driven design pattern</Description>
+		<LangVersion>latest</LangVersion>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\LICENSE" Pack="true" PackagePath=""/>
+	</ItemGroup>
+
+</Project>
