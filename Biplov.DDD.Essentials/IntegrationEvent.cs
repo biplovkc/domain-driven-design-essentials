@@ -4,7 +4,7 @@ public record IntegrationEvent
 {        
     public IntegrationEvent()
     {
-        Id = Guid.NewGuid();
+        Id = $"iev_{Guid.NewGuid():N}";
         CreationDate = DateTime.UtcNow;
     }
 
