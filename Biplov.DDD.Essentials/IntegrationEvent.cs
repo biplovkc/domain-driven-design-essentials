@@ -9,8 +9,11 @@ public record IntegrationEvent
     }
 
     [JsonConstructor]
-    public IntegrationEvent(Guid id, DateTime createDate)
+    public IntegrationEvent(string id, DateTime createDate)
     {
+        if (string.IsNullOrWhiteSpace(id))
+            throw new ArgumentNullException(nameof(id));
+            
         Id = id;
         CreationDate = createDate;
     }
