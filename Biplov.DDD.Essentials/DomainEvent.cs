@@ -3,7 +3,7 @@
 /// <summary>
 /// Base class for domain event
 /// </summary>
-public class DomainEvent
+public record DomainEvent
 {
     /// <summary>
     /// Initialized DomainEvent object with default values
@@ -22,7 +22,7 @@ public class DomainEvent
     /// <param name="id">domain event id</param>
     /// <param name="creationDate">domain event creation date</param>
     /// <exception cref="ArgumentException"></exception>
-    public DomainEvent(string id, DateTime creationDate)
+    public DomainEvent(string id, DateTime creationDate) : this()
     {
         if (string.IsNullOrWhiteSpace(id))
             throw new ArgumentException(nameof(id));
@@ -35,11 +35,11 @@ public class DomainEvent
     /// Domain event Id
     /// Default value is $"dme_{Guid.NewGuid():N}"
     /// </summary>
-    public string Id { get; }
+    public string Id { get; init; }
 
     /// <summary>
     /// Domain event creation date time
     /// Default value is utc date time
     /// </summary>
-    public DateTime CreationDate { get; }
+    public DateTime CreationDate { get; init; }
 }
